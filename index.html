@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connerie du Chamandier</title>
+  <style>
+    .article-image {
+      width: 300px;         /* Largeur fixe */
+      height: 200px;        /* Hauteur fixe */
+      object-fit: cover;    /* Zoome et découpe l'image proprement sans la déformer */
+      border-radius: 8px;   /* Optionnel : arrondit légèrement les coins */
+      margin-bottom: 0px;   /* Espace en dessous de l'image */
+      margin-top: 35px;      /* Espace au-dessus de l'image */
+    }
+    .jost-title {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100 900;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+    }
+    .description {
+    font-family: "Noto Sans", serif;
+    font-size: 16px;
+    margin : 0px;
+    }
+    .text {
+      font-family: "Noto Sans", serif;
+      font-size: 14px;
+      margin-bottom: 5px;
+      margin-top: 0px;
+    }
+    .read_more {
+      font-family: "Roboto Slab", serif;
+      font-size: 14px;
+      color: #007BFF;
+      text-decoration: none;
+      margin-bottom: 0px;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+</head>
+<body>
+  <h1 class="jost-title" style="margin-top: -10px;">Connerie du Chamandier</h1>
+  <p class="description">Ce site est un historique des conneries du Chamandier.</p>
+  <div id="articles"></div>
+  <script>
+    fetch('https://api.jsonbin.io/v3/b/6ab6986cac6210605af4b7e9')
+      .then((res) => res.json())
+      .then((data) => {
+        const articles = data.record ? data.record.articles : data.articles;
+        const conteneur = document.getElementById('articles');
+
+        Object.values(articles).forEach((article) => {
+          conteneur.innerHTML += `
+            <div class="article-card">
+              <img src="${article.image_url}" alt="${article.title}" class="article-image">
+              <h2 class="jost-title">${article.title}</h2>
+              <p class="description">${article.description}</p>
+              <details>
+                <summary class="read_more">Lire la suite</summary>
+                <p class="text">${article.text}</p>
+              </details>
+            </div>
+          `;
+        });
+      });
+  </script>
+</body>
+</html>
