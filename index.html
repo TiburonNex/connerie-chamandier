@@ -13,7 +13,7 @@
       margin-bottom: 0px;   /* Espace en dessous de l'image */
       margin-top: 35px;      /* Espace au-dessus de l'image */
     }
-    .jost-title {
+    .title {
     font-family: "Jost", sans-serif;
     font-optical-sizing: auto;
     font-weight: 100 900;
@@ -47,7 +47,7 @@
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
 </head>
 <body>
-  <h1 class="jost-title" style="margin-top: -10px;">Connerie du Chamandier</h1>
+  <h1 class="-title" style="margin-top: -10px;">Connerie du Chamandier</h1>
   <p class="description">Ce site est un historique des conneries du Chamandier.</p>
   <div id="articles"></div>
   <script>
@@ -61,7 +61,7 @@
           conteneur.innerHTML += `
             <div class="article-card">
               <img src="${article.image_url}" alt="${article.title}" class="article-image">
-              <h2 class="jost-title">${article.title}</h2>
+              <h2 class="title">${article.title}</h2>
               <p class="description">${article.description}</p>
               <details>
                 <summary class="read_more">Lire la suite</summary>
