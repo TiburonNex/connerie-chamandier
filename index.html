@@ -46,6 +46,12 @@
     body {
       background-color: srgb(255, 237, 213);
     }
+    summary {
+  list-style: none; /* Supprime le triangle sur Chrome, Firefox et Edge */
+  }
+  summary::-webkit-details-marker {
+  display: none; /* Supprime le triangle sur Safari */
+  }
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
