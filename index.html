@@ -4,55 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Connerie du Chamandier</title>
-  <style>
-    .article-image {
-      width: 300px;         /* Largeur fixe */
-      height: 200px;        /* Hauteur fixe */
-      object-fit: cover;    /* Zoome et découpe l'image proprement sans la déformer */
-      border-radius: 8px;   /* Optionnel : arrondit légèrement les coins */
-      margin-bottom: 0px;   /* Espace en dessous de l'image */
-      margin-top: 35px;      /* Espace au-dessus de l'image */
-    }
-    .title {
-    font-family: "Jost", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100 900;
-    font-style: normal;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 5px;
-    color: #0f0c09;
-    }
-    .description {
-    font-family: "Noto Sans", serif;
-    font-size: 16px;
-    margin : 0px;
-    color:  #0f0c09;;
-    }
-    .text {
-      font-family: "Noto Sans", serif;
-      font-size: 14px;
-      margin-bottom: 5px;
-      margin-top: 0px;
-      color :  #0f0c09;
-    }
-    .read_more {
-      font-family: "Roboto Slab", serif;
-      font-size: 14px;
-      color: #0f0c09;
-      text-decoration: underline;
-      margin-bottom: 0px;
-    }
-    body {
-      background-color: srgb(255, 237, 213);
-    }
-    summary {
-      list-style: none; /* Supprime le triangle sur Chrome, Firefox et Edge */
-    }
-    summary::-webkit-details-marker {
-      display: none; /* Supprime le triangle sur Safari */
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
@@ -84,5 +36,8 @@
         });
       });
   </script>
-</body>
+    <div class="centered">
+      <button class="button" onclick="window.location.href='mailto:conneries-chamandier@proton.me'">Proposer une connerie</button>
+    </div>
+  </body>
 </html>

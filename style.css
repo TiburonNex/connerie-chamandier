@@ -1,0 +1,68 @@
+.article-image {
+	width: 300px;         /* Largeur fixe */
+	height: 200px;        /* Hauteur fixe */
+	object-fit: cover;    /* Zoome et découpe l'image proprement sans la déformer */
+	border-radius: 8px;   /* Optionnel : arrondit légèrement les coins */
+	margin-bottom: 0px;   /* Espace en dessous de l'image */
+	margin-top: 35px;      /* Espace au-dessus de l'image */
+}
+.title {
+	font-family: "Jost", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 100 900;
+	font-style: normal;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 5px;
+	color: #0f0c09;
+	}
+.description {
+	font-family: "Noto Sans", serif;
+	font-size: 16px;
+	margin : 0px;
+	color:  #0f0c09;;
+}
+.text {
+	font-family: "Noto Sans", serif;
+	font-size: 14px;
+	margin-bottom: 5px;
+	margin-top: 0px;
+	color :  #0f0c09;
+}
+.read_more {
+	font-family: "Roboto Slab", serif;
+	font-size: 14px;
+	color: #0f0c09;
+	text-decoration: underline;
+	margin-bottom: 0px;
+}
+body {
+	background-color: #fffdec;
+}
+summary {
+	list-style: none; /* Supprime le triangle sur Chrome, Firefox et Edge */
+}
+summary::-webkit-details-marker {
+	display: none; /* Supprime le triangle sur Safari */
+}
+.centered {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px; /* Ajustez la valeur selon vos besoins */
+}
+button {
+	font-size: 15px;
+	background-color: transparent;
+	border: 1px solid black;
+	cursor: pointer;
+	border-radius: 50px;
+	padding: 10px 15px;
+	margin-top: 10px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	background-color: #ffffff;
+}
+button:hover {
+	background-color: #000000;
+	color: #fff;
+}
